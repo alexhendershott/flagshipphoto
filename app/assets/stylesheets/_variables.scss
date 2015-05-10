@@ -19,7 +19,7 @@ $midnight:               rgba(0,0,0,1);
 
 $brand-primary:         #009688;
 $brand-secondary:       #00695C;
-$brand-thirdary:        #00897B;
+$brand-thirdary:        #00796B;
 $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
@@ -31,7 +31,7 @@ $brand-danger:          #d9534f !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #fff !default;
+$body-bg:               #f9f9f9 !default;
 //** Global text color on `<body>`.
 $text-color:            $gray-dark !default;
 
