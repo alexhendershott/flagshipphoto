@@ -103,6 +103,22 @@ html, body, h1, h2, h3, h4, h5, h6, a {
    padding: 20px 0px 0px 0px;
  }
 
+/* Alert Styling */
+.alert-info {
+  background-color: $brand-secondary;
+  border-color: transparent;
+  color: $white;
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+  border-radius: 0;
+  border: 0px solid;
+  text-align: center;
+  top: 0;
+  height: 64px;
+  line-height: 34px;
+}
+
  /* Media Queries */
 
 /*==========  Non-Mobile First Method  ==========*/
