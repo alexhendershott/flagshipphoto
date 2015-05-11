@@ -197,6 +197,12 @@ form {
 
 .btn-material:hover {
   background-color: rgba(0,0,0,.8);
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  -ms-transition: all .3s ease-out;
+  transition: all .3s ease-out;
 }
 
 input:-webkit-autofill {
@@ -239,10 +245,6 @@ input[type=checkbox]:checked + label:before {
   -moz-background-size: 11px auto;
   -o-background-size: 11px auto;
   background-size: 11px auto;
-}
-
-.divider {
-  color: $gray-lighter;
 }
 
  /* Media Queries */
