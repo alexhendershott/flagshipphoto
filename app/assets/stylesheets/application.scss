@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require 'masonry/transitions'
  */
 
  @import '_variables';
@@ -245,6 +246,19 @@ input[type=checkbox]:checked + label:before {
   -moz-background-size: 11px auto;
   -o-background-size: 11px auto;
   background-size: 11px auto;
+}
+
+#pins {
+  margin: 0 auto;
+}
+
+.box {
+  margin: 5px;
+  width: 214px;
+}
+
+.box img {
+  width: 100%;
 }
 
  /* Media Queries */
