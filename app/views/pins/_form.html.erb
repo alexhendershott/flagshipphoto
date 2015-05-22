@@ -20,12 +20,14 @@
             <p class="panel-info">Upload your photo below.</p>
 
             <div class="form-group">
-              <%= f.label :image %>
               <%= f.file_field :image, class: "form-control" %>
             </div>
 
             <div class="form-group">
               <%= f.text_field :description, placeholder: "Photo Description", class: "form-control" %>
+            </div>
+            <div class="form-group">
+              <%= f.select :device, options_for_select(%w[N6 S6 G4]), class: "form-control" %>
             </div>
             <div class="form-group last">
               <%= f.submit "Submit Photo", class: "btn btn-primary btn-material" %>

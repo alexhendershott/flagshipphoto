@@ -18,7 +18,7 @@ $gray-lightest:           lighten($gray-base, 93.5%) !default; // #eee
 $white:                  rgba(255,255,255,.9);
 $midnight:               rgba(0,0,0,1);
 
-$brand-primary:         #009688;
+$brand-primary:         #3F51B5;
 $brand-secondary:       #262626;
 $brand-thirdary:        #00796B;
 $brand-success:         #5cb85c !default;
@@ -32,7 +32,7 @@ $brand-danger:          #F44336 !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #f9f9f9 !default;
+$body-bg:               #eceff1 !default;
 //** Global text color on `<body>`.
 $text-color:            $gray-dark !default;
 

@@ -303,6 +303,10 @@ input[type=checkbox]:checked + label:before {
   margin-bottom: 20px;
 }
 
+.fullCard .card-image img {
+  // max-height: 500px;
+}
+
 .halfCard .col-md-6 {
   margin-bottom: 20px;
 }
