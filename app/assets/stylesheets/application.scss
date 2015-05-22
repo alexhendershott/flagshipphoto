@@ -12,7 +12,6 @@
  *
  *= require_tree .
  *= require_self
- *= require 'masonry/transitions'
  */
 
  @import '_variables';
@@ -101,9 +100,9 @@ html, body, h1, h2, h3, h4, h5, h6, a {
  }
 
  .intro {
-   font-size: 20px;
-   line-height: 32px;
-   padding: 20px 0px 0px 0px;
+   font-size: 30px;
+   line-height: 42px;
+   padding: 40px 6px 40px 6px;
  }
 
 /* Alert Styling */
@@ -206,6 +205,14 @@ form {
   transition: all .3s ease-out;
 }
 
+.fullCard .col-md-12 {
+
+}
+
+.halfCard .col-md-6 {
+
+}
+
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px white inset;
 }
@@ -254,11 +261,50 @@ input[type=checkbox]:checked + label:before {
 
 .box {
   margin: 5px;
-  width: 214px;
+  width: 100%;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 0px;
 }
 
 .box img {
   width: 100%;
+}
+
+.panel-body {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 15px;
+  padding: 0px;
+}
+
+.card-image {
+  position: relative;
+}
+
+.card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-action {
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
+  padding: 20px;
+}
+
+.fullCard .col-md-12 {
+  margin-bottom: 20px;
+}
+
+.halfCard .col-md-6 {
+  margin-bottom: 20px;
 }
 
  /* Media Queries */
@@ -295,6 +341,11 @@ input[type=checkbox]:checked + label:before {
   form {
     width: 100%;
     margin: 20px 0px 40px 0px;
+  }
+  .intro {
+    font-size: 24px;
+    line-height: 36px;
+    padding: 10px 6px 20px 6px;
   }
 }
 
