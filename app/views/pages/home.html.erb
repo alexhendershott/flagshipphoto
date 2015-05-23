@@ -23,10 +23,11 @@
           <div class="fullCard">
             <div class="col-md-12">
               <div class="box panel panel-default">
-                <div class="card-image">
-                  <%= image_tag pin.image.url(:medium) %>
-                  <span class="card-title"><%= pin.device %></span>
-                </div>
+                <a href="<%= pin_path(pin) %>">
+                  <div class="card-image" style="background: url(<%= pin.image.url(:medium) %>) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+                    <span class="card-title"><%= pin.device %></span>
+                  </div>
+                </a>
                 <div class="panel-body">
                   <div class="card-content">
                     <p><%= pin.description %></p>
@@ -50,10 +51,11 @@
           <div class="halfCard">
             <div class="col-md-6">
               <div class="box panel panel-default">
-                <div class="card-image">
-                  <%= image_tag pin.image.url(:medium) %>
-                  <span class="card-title"><%= pin.device %></span>
-                </div>
+                <a href="<%= pin_path(pin) %>">
+                  <div class="card-image" style="background: url(<%= pin.image.url(:medium) %>) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+                    <span class="card-title"><%= pin.device %></span>
+                  </div>
+                </a>
                 <div class="panel-body">
                   <div class="card-content">
                     <p><%= pin.description %></p>

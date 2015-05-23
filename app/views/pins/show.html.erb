@@ -1,19 +1,10 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
+<% content_for :body_class, "imageSingle" %>
 
-      <%= image_tag @pin.image.url(:thumb) %>
+<p class="navbar-text">
+  <%= link_to 'Back', pins_path %>
+  <% if @pin.user == current_user %>
+    <%= link_to 'Edit', edit_pin_path(@pin) %>
+  <% end %>
+</p>
 
-      <p>
-        <strong>Description:</strong>
-        <%= @pin.description %>
-      </p>
-
-      <% if @pin.user == current_user %>
-        <%= link_to 'Edit', edit_pin_path(@pin) %>
-      <% end %>
-      <%= link_to 'Back', pins_path %>
-
-    </div>
-  </div>
-</div>
+<a href="<%= @pin.image.url %>"><%= image_tag @pin.image.url, :class => "fullImage fixedOffset" %></a>

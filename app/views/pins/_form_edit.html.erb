@@ -17,17 +17,12 @@
               </div>
             <% end %>
 
-            <p class="panel-info">Upload your photo below.</p>
+            <p class="panel-info">Edit your photo below.</p>
 
-            <!-- http://jsfiddle.net/JJRrc/1/ -->
+            <%= image_tag(@pin.image.url(:medium)) %>
 
             <div class="form-group">
-              <p class="form">
-                <input type="text" id="path" />
-              	<label class="add-photo-btn">upload<span><input type="file" id="myfile" name="myfile" /></span>
-              </label>
-              </p>
-              <%= f.file_field :image, class: "form-control form-input" %>
+              <%= f.file_field :image, class: "form-control" %>
             </div>
 
             <div class="form-group">

@@ -74,16 +74,17 @@ html, body, h1, h2, h3, h4, h5, h6, a {
    height:56px;
    line-height:56px;
    border-radius: 50%;
-   color: rgba(0,0,0,.6);
+   color: $white;
    text-align:center;
    text-decoration:none;
-   background: rgba(255,255,255,.9);
+   background: $brand-secondary;
    box-shadow: 0 0 3px gray;
    font-size:32px;
    box-shadow: 0 1px 6px 0 rgba(0,0,0,.12),0 1px 6px 0 rgba(0,0,0,.12);
  }
  .btn-floating:hover {
-   background: rgba(255,255,255,1);
+   background: $brand-thirdary;
+   color: $white;
    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
    -webkit-transition: all .3s ease-out;
    -moz-transition: all .3s ease-out;
@@ -96,9 +97,14 @@ html, body, h1, h2, h3, h4, h5, h6, a {
    position: absolute;
    top: 220px;
    right: 80px;
-   color: $brand-primary;
+   z-index: 9999;
  }
-
+ .btn-add-nav {
+   position: absolute;
+   top: 34px;
+   right: 80px;
+   display: none;
+ }
  .intro {
    font-size: 30px;
    line-height: 42px;
@@ -107,7 +113,7 @@ html, body, h1, h2, h3, h4, h5, h6, a {
 
 /* Alert Styling */
 .alert-info {
-  background-color: $brand-secondary;
+  background-color: $brand-info;
   border-color: transparent;
   color: $white;
   position: absolute;
@@ -160,6 +166,14 @@ form {
   box-shadow: none;
 }
 
+.form-input {
+
+}
+
+.form-cursor {
+  cursor: pointer;
+}
+
 .panel-account {
   width: 411px;
   margin: 0 auto;
@@ -203,14 +217,6 @@ form {
   -o-transition: all .3s ease-out;
   -ms-transition: all .3s ease-out;
   transition: all .3s ease-out;
-}
-
-.fullCard .col-md-12 {
-
-}
-
-.halfCard .col-md-6 {
-
 }
 
 input:-webkit-autofill {
@@ -278,6 +284,12 @@ input[type=checkbox]:checked + label:before {
 
 .card-image {
   position: relative;
+  height: 600px;
+}
+
+.card-image:hover {
+  opacity: .8;
+  cursor: pointer;
 }
 
 .card-title {
@@ -303,12 +315,75 @@ input[type=checkbox]:checked + label:before {
   margin-bottom: 20px;
 }
 
-.fullCard .card-image img {
-  // max-height: 500px;
+.fullCard {
+  .card-image {
+    height: 600px;
+    max-height: 600px;
+  }
+}
+
+.halfCard {
+  .card-image {
+    height: 400px;
+    max-height: 400px;
+  }
 }
 
 .halfCard .col-md-6 {
   margin-bottom: 20px;
+}
+
+.fullImage {
+  width: 100%;
+}
+
+.fixedOffset {
+  position: absolute;
+  top: 128px;
+}
+
+.imageSingle {
+  padding-top: 64px;
+}
+
+.navbar-text {
+  margin-top: 22px;
+  margin-bottom: 22px;
+  margin-left: 24px;
+}
+
+.imageSingle .btn-add-nav {
+  display: block;
+}
+.form input[type="file"]{
+z-index: 999;
+line-height: 0;
+font-size: 50px;
+position: absolute;
+opacity: 0;
+filter: alpha(opacity = 0);-ms-filter: "alpha(opacity=0)";
+cursor: pointer;
+_cursor: hand;
+margin: 0;
+padding:0;
+left:0;
+}
+
+.add-photo-btn{
+position:relative;
+overflow:hidden;
+cursor:pointer;
+text-align:center;
+background-color:#83b81a;
+color:#fff;display:block;
+width:197px;
+height:31px;
+font-size:18px;
+line-height:30px;
+float:left;
+}
+input[type="text"]{
+float:left;
 }
 
  /* Media Queries */
@@ -322,7 +397,12 @@ input[type=checkbox]:checked + label:before {
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-
+  .fullCard {
+    .card-image {
+      height: 400px;
+      max-height: 400px;
+    }
+  }
 }
 
 /* Small Devices, Tablets */
@@ -334,8 +414,20 @@ input[type=checkbox]:checked + label:before {
   .jumbotron .container {
     padding-left: 0px;
   }
-  .btn-floating {
+  .btn-add-home {
+    position: absolute;
+    top: 220px;
+    right: 40px;
+    z-index: 9999;
+  }
+  .btn-add-nav {
+    position: absolute;
+    top: 34px;
+    right: 40px;
     display: none;
+  }
+  .jumbotron {
+    padding: 130px 50px 50px 50px;
   }
   .panel-account {
     width: 100%;
@@ -350,6 +442,18 @@ input[type=checkbox]:checked + label:before {
     font-size: 24px;
     line-height: 36px;
     padding: 10px 6px 20px 6px;
+  }
+  .halfCard {
+    .card-image {
+      height: 200px;
+      max-height: 200px;
+    }
+  }
+  .fullCard {
+    .card-image {
+      height: 200px;
+      max-height: 200px;
+    }
   }
 }
 
