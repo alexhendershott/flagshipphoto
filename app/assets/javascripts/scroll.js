@@ -13,9 +13,3 @@ $(window).load(function(){
      }
  });
 });
-
-$(window).load(function(){
-$('#myfile').change(function(){
-		$('#path').val($(this).val());
-	});
-});

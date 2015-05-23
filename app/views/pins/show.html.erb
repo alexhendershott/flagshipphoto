@@ -1,6 +1,6 @@
 <% content_for :body_class, "imageSingle" %>
 
-<p class="navbar-text">
+<p class="navbar-text navbar-fixed-top">
   <%= link_to 'Back', pins_path %>
   <% if @pin.user == current_user %>
     <%= link_to 'Edit', edit_pin_path(@pin) %>
