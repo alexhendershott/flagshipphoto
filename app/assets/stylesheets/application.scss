@@ -127,6 +127,21 @@ html, body, h1, h2, h3, h4, h5, h6, a {
   line-height: 34px;
 }
 
+.error-info {
+  background-color: $brand-info;
+  border-color: transparent;
+  color: $white;
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+  border-radius: 0;
+  border: 0px solid;
+  text-align: center;
+  top: 0;
+  height: 64px;
+  line-height: 34px;
+}
+
 /* Forms */
 form {
   position: relative;
@@ -452,11 +467,12 @@ button.btn.dropdown-toggle.btn-default, button.btn.dropdown-toggle.btn-default:h
 .open > .dropdown-menu {
   width: 100%;
   position: absolute;
-  top: 10px;
+  top: -2px;
   z-index: 9999;
-  border: 1px solid rgba(0,0,0,.2);
-  height: 200px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 336px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  font-size: 15px;
 }
 
 ul.dropdown-menu.inner {
@@ -494,6 +510,28 @@ span.glyphicon.glyphicon-ok.check-mark {
   right: 10px;
   position: absolute;
   top: 14px;
+}
+
+.dropdown-menu > li > a {
+  display: block;
+  padding: 15px 20px 15px 30px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333333;
+  white-space: nowrap;
+}
+
+.dropdown-menu > li:first-child {
+  padding-top: 15px;
+}
+
+.dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: #262626;
+  background-color: white;
+  outline: none;
+  border: 0px solid transparent;
 }
 
  /* Media Queries */

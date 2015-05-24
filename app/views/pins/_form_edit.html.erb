@@ -17,23 +17,24 @@
               </div>
             <% end %>
 
-            <p class="panel-info">Edit your photo below.</p>
+            <p class="panel-info">Upload your photo below.</p>
 
-            <!-- <%= image_tag(@pin.image.url(:medium)) %> -->
-
-            <div class="form-group">
-              <%= f.file_field :image, class: "form-control" %>
+            <div class="form-group relative">
+              <div class="title form-control form-input">Choose Photo</div>
+              <%= f.file_field :image, class: "form-control form-input upload" %>
+              <span class="upload-path form-control form-input"></span>
             </div>
 
             <div class="form-group">
               <%= f.text_field :description, placeholder: "Photo Description", class: "form-control" %>
             </div>
             <div class="form-group">
-              <%= f.select :device, options_for_select(%w[N6 S6 G4]), class: "form-control" %>
+              <%= f.select(:device, ['Nexus 6', 'Samsung Galaxy S6', 'Samsung Galaxy Note 4', 'LG G4', 'HTC One M9'], {include_blank: "Select Mobile Device"}, { :class => 'selectpicker' }) %>
             </div>
             <div class="form-group last">
               <%= f.submit "Submit Photo", class: "btn btn-primary btn-material" %>
             </div>
+
           <% end %>
 
       </div>

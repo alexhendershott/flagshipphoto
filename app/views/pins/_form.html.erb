@@ -6,7 +6,7 @@
 
           <%= form_for @pin, html: { multipart: true } do |f| %>
             <% if @pin.errors.any? %>
-              <div id="error_explanation">
+              <div id="flash_error" class="error_info">
                 <h2><%= pluralize(@pin.errors.count, "error") %> prohibited this pin from being saved:</h2>
 
                 <ul>
@@ -18,8 +18,6 @@
             <% end %>
 
             <p class="panel-info">Upload your photo below.</p>
-
-            <!-- http://jsfiddle.net/JJRrc/1/ -->
 
             <div class="form-group relative">
               <div class="title form-control form-input">Choose Photo</div>
