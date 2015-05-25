@@ -649,14 +649,15 @@ span.glyphicon.glyphicon-ok.check-mark {
 }
 
 .side-nav-logo {
-  color: $gray-light;
+  color: $gray-lightest;
   padding: 24px;
   font-size: 26px;
   padding-bottom: 20px;
+  font-weight: 500;
 }
 
 .side-nav-logo:hover {
-  color: $gray-light;
+  color: $gray-lightest;
   text-decoration: none;
 }
 
