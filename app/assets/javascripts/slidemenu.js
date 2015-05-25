@@ -6,6 +6,7 @@ $(window).load(function(){
     }, 250, function() {
       // Animation complete.
     });
+    $('.overlay').show();
   });
   $('body').on('click',function(event){
    if(!$(event.target).is('#nav-toggle')){
@@ -15,6 +16,7 @@ $(window).load(function(){
      }, 250, function() {
        // Animation complete.
      });
+     $('.overlay').hide();
    }
   });
 });
