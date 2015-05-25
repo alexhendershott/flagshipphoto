@@ -11,7 +11,7 @@
         </button>
         <div id="side-nav" class="inner" style="left: -240px;">
           <div class="side-nav-wrapper">
-            <span id="logo">Flagship Photo</span>
+            <%= link_to "Flagship Photo", root_path, :class => "side-nav-logo" %>
             <nav>
               <dl>
                 <% if user_signed_in? %>

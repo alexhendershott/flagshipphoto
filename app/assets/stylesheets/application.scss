@@ -643,11 +643,16 @@ span.glyphicon.glyphicon-ok.check-mark {
   margin-top: 10px;
 }
 
-#side-nav #logo {
+.side-nav-logo {
   color: $gray-light;
   padding: 24px;
   font-size: 26px;
   padding-bottom: 20px;
+}
+
+.side-nav-logo:hover {
+  color: $gray-light;
+  text-decoration: none;
 }
 
 .side-nav-wrapper .legal {
