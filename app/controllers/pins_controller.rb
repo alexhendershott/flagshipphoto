@@ -8,6 +8,8 @@ class PinsController < ApplicationController
   end
 
   def show
+    @disable_nav = true
+    @sub_nav = true
   end
 
   def new

@@ -93,6 +93,36 @@ html, body, h1, h2, h3, h4, h5, h6, a {
    transition: all .3s ease-out;
    text-decoration: none;
  }
+ .btn-floating-edit {
+   display:block;
+   width:56px;
+   height:56px;
+   line-height:56px;
+   border-radius: 50%;
+   color: $white;
+   text-align:center;
+   text-decoration:none;
+   background: $brand-secondary;
+   box-shadow: 0 0 3px gray;
+   font-size:26px;
+   box-shadow: 0 1px 6px 0 rgba(0,0,0,.12),0 1px 6px 0 rgba(0,0,0,.12);
+ }
+ .btn-floating-edit:hover {
+   background: $brand-thirdary;
+   color: $white;
+   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+   -webkit-transition: all .3s ease-out;
+   -moz-transition: all .3s ease-out;
+   -o-transition: all .3s ease-out;
+   -ms-transition: all .3s ease-out;
+   transition: all .3s ease-out;
+   text-decoration: none;
+ }
+ .arrow-back {
+   position: absolute;
+   font-size: 36px;
+   left: -4px;
+ }
  .btn-add-home {
    position: absolute;
    top: 220px;
@@ -532,6 +562,18 @@ span.glyphicon.glyphicon-ok.check-mark {
   background-color: white;
   outline: none;
   border: 0px solid transparent;
+}
+
+.sub-action {
+  color: $white;
+  a:hover {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.back-action i {
+
 }
 
  /* Media Queries */

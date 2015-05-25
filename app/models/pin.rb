@@ -1,6 +1,7 @@
 class Pin < ActiveRecord::Base
   belongs_to :user
   validates :device, :presence => true
+  # validates_presence_of :device, :message => "not selected"
   validates :image, :presence => true
   validates :description, :presence => true
   has_attached_file :image, :styles => { :medium => "2000x2000>", :thumb => "200x200>" }

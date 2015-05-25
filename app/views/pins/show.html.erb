@@ -1,10 +1,9 @@
 <% content_for :body_class, "imageSingle" %>
 
 <p class="navbar-text navbar-fixed-top">
-  <%= link_to 'Back', pins_path %>
-  <% if @pin.user == current_user %>
-    <%= link_to 'Edit', edit_pin_path(@pin) %>
-  <% end %>
+  <span class="sub-action">
+    <%= link_to '', pins_path, class: "md-arrow-back md-2x arrow-back" %>
+  </span>
 </p>
 
 <a href="<%= @pin.image.url %>"><%= image_tag @pin.image.url, :class => "fullImage fixedOffset" %></a>
