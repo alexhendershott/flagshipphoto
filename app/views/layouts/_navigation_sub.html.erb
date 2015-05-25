@@ -3,12 +3,9 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <div id="slideleft" class="slide">
-        <button id="nav-toggle" type="button" class="navbar-toggle collapsed">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+        <span class="sub-action">
+          <%= link_to '', pins_path, class: "md-arrow-back md-2x arrow-back" %>
+        </span>
         <div id="side-nav" class="inner" style="left: -240px;">
           <div class="side-nav-wrapper">
             <%= link_to "Flagship Photo", root_path, :class => "side-nav-logo" %>

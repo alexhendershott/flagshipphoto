@@ -119,9 +119,11 @@ html, body, h1, h2, h3, h4, h5, h6, a {
    text-decoration: none;
  }
  .arrow-back {
-   position: absolute;
-   font-size: 36px;
-   left: -4px;
+   font-size: 32px;
+   color: white;
+   line-height: 64px;
+   left: 20px;
+   position: relative;
  }
  .btn-add-home {
    position: absolute;
@@ -566,9 +568,12 @@ span.glyphicon.glyphicon-ok.check-mark {
 
 .sub-action {
   color: $white;
+  height: 64px;
+  width: 59px;
+  float: left;
   a:hover {
     text-decoration: none;
-    color: white;
+    color: $white;
   }
 }
 
