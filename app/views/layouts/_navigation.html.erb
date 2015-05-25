@@ -1,41 +1,39 @@
-
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <%= link_to "Flagship Photo", root_path, :class => "navbar-brand" %>
-      <%= link_to "+", new_pin_path, :class => "btn-floating btn-add-nav" %>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <% if user_signed_in? %>
-        <li>
-          <%= link_to "About", about_path %>
-          <%= link_to "Account Settings", edit_user_registration_path %>
-        </li>
-        <li>
-          <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
-        </li>
-        <% else %>
-          <li>
-            <%= link_to "About", about_path %>
-          </li>
-          <li>
-            <%= link_to "Log In", new_user_session_path %>
-          </li>
-          <li>
-            <%= link_to "Sign up", new_user_registration_path %>
-          </li>
-        <% end %>
-      </ul>
+      <div id="slideleft" class="slide">
+        <button id="nav-toggle" type="button" class="navbar-toggle collapsed">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div id="side-nav" class="inner" style="left: -240px;">
+          <div class="side-nav-wrapper">
+            <span id="logo">Flagship Photo</span>
+            <nav>
+              <dl>
+                <% if user_signed_in? %>
+                <dt><%= link_to "About", about_path %></dt>
+                <dt><%= link_to "Account Settings", edit_user_registration_path %></dt>
+                <dt><%= link_to "Log Out", destroy_user_session_path, method: :delete %></dt>
+                <% else %>
+                <dt><%= link_to "About", about_path %></dt>
+                <dt><%= link_to "Log In", new_user_session_path %></dt>
+                <dt><%= link_to "Sign up", new_user_registration_path %></dt>
+                <% end %>
+              </dl>
+            </nav>
+            <div class="legal">
+              <p class="copyright">Flagship Photo ©</p>
+              <a href="#">Privacy</a> &amp; <a href="#">Terms</a>
+            </div>
+          </div>
+        </div>
+        <%= link_to "Flagship Photo", root_path, :class => "navbar-brand" %>
+        <%= link_to "+", new_pin_path, :class => "btn-floating btn-add-nav" %>
+      </div>
     </div>
   </div>
 </nav>

@@ -576,6 +576,97 @@ span.glyphicon.glyphicon-ok.check-mark {
 
 }
 
+.margin {
+  margin-left:240px;
+  overflow-x:hidden;
+  transform: scale(0.95) translate3d(0,100%,0);
+  transition: transform 400ms ease, opacity 400ms ease;
+}
+
+#side-nav {
+  border-right: 1px solid rgba(0,0,0,0.14);
+  padding-top: 20px;
+  bottom: 0;
+  background: #fff;
+  color: #333;
+  display: block;
+  font-family: "RobotoDraft","Roboto",sans-serif;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 240px;
+  z-index: 9999;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition-delay: 0.1s;
+  -moz-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#side-nav nav dl dt {
+  border-left: 2px solid transparent;
+  color: #333;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+#side-nav nav dl dt a {
+  color: #333;
+  line-height: 20px;
+  display: block;
+  padding: 15px 0 15px 22px;
+}
+
+#side-nav nav dl dt a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+#side-nav nav dl {
+  margin-top: 10px;
+}
+
+#side-nav #logo {
+  color: $gray-light;
+  padding: 24px;
+  font-size: 26px;
+  padding-bottom: 20px;
+}
+
+.side-nav-wrapper .legal {
+  border-top: 1px solid #e0e0e0;
+  bottom: 0;
+  color: #212121;
+  font-size: 13px;
+  height: 96px;
+  line-height: 24px;
+  padding: 24px;
+  position: absolute;
+  width: 100%;
+}
+
+dt:hover {
+  background-color: $gray-lightest;
+  cursor: pointer;
+}
+
  /* Media Queries */
 
 /*==========  Non-Mobile First Method  ==========*/
