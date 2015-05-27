@@ -1,4 +1,4 @@
-$(window).load(function(){
+$(document).on('page:change', function () {
   // Span
   var span = document.getElementsByClassName('upload-path');
   // Button

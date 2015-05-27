@@ -1,4 +1,4 @@
-$(window).load(function(){
+$(document).on('page:change', function () {
   $("#nav-toggle").click(function(){
     $( "#side-nav" ).animate({
       opacity: 1,
@@ -7,16 +7,16 @@ $(window).load(function(){
       // Animation complete.
     });
     $('.overlay').show();
+    $('.btn-add-home').css('z-index','1000');
   });
-  $('body').on('click',function(event){
-   if(!$(event.target).is('#nav-toggle')){
-     $( "#side-nav" ).animate({
-       opacity: 1,
-       left: "+=-240",
-     }, 250, function() {
-       // Animation complete.
-     });
-     $('.overlay').hide();
-   }
+  $(".overlay").click(function(){
+    $( "#side-nav" ).animate({
+      opacity: 1,
+      left: "-=240",
+    }, 250, function() {
+      // Animation complete.
+    });
+    $('.overlay').hide();
+    $('.btn-add-home').css('z-index','1031');
   });
 });

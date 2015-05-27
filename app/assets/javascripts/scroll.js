@@ -1,4 +1,4 @@
-$(window).load(function(){
+$(document).on('page:change', function () {
    $(window).scroll(function() {
     if ($(this).scrollTop()>185)
      {

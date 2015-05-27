@@ -13,4 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require turbolinks
 //= require_tree .
+
+$(document).on('page:load', function(){
+    $('.selectpicker').selectpicker();
+});
