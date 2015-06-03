@@ -16,6 +16,8 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).on('page:load', function(){
+$( document ).ready(function() {
     $('.selectpicker').selectpicker();
+    var bLazy = new Blazy();
+    console.log("yep");
 });

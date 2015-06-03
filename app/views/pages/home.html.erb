@@ -23,11 +23,13 @@
           <div class="fullCard">
             <div class="col-md-12">
               <div class="box panel panel-default">
-                <a href="<%= pin_path(pin) %>">
-                  <div class="card-image" style="background: url(<%= pin.image.url(:large) %>) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
-                    <span class="card-title"><%= pin.device %></span>
-                  </div>
-                </a>
+                <div class="load-wrapper">
+                  <a href="<%= pin_path(pin) %>">
+                    <div class="card-image b-lazy" data-src="<%= pin.image.url(:large) %>" style="background: no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+                      <span class="card-title"><%= pin.device %></span>
+                    </div>
+                  </a>
+                </div>
                 <div class="panel-body">
                   <div class="card-content">
                     <p><%= pin.description %></p>
@@ -51,11 +53,13 @@
           <div class="halfCard">
             <div class="col-md-6">
               <div class="box panel panel-default">
-                <a href="<%= pin_path(pin) %>">
-                  <div class="card-image" style="background: url(<%= pin.image.url(:medium) %>) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
-                    <span class="card-title"><%= pin.device %></span>
-                  </div>
-                </a>
+                <div class="load-wrapper">
+                  <a href="<%= pin_path(pin) %>">
+                    <div class="card-image b-lazy" data-src="<%= pin.image.url(:medium) %>" style="background: no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+                      <span class="card-title"><%= pin.device %></span>
+                    </div>
+                  </a>
+                </div>
                 <div class="panel-body">
                   <div class="card-content">
                     <p><%= pin.description %></p>

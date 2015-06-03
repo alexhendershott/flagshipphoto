@@ -716,6 +716,28 @@ dt:hover {
   cursor: pointer;
 }
 
+.b-lazy {
+        -webkit-transition: opacity 500ms ease-in-out;
+           -moz-transition: opacity 500ms ease-in-out;
+             -o-transition: opacity 500ms ease-in-out;
+                transition: opacity 500ms ease-in-out;
+                 max-width: 100%;
+                   opacity: 0;
+    }
+    .b-lazy.b-loaded {
+                   opacity: 1;
+}
+
+.load-wrapper {
+        // Adding a loader and background color. The user will see it
+	// if the image is loading slow.
+        background: #ffffff url(<%= asset_path 'ajax-loader.gif' %>) center center no-repeat;
+        width: 100%
+    }
+
+
+
+
  /* Media Queries */
 
 /*==========  Non-Mobile First Method  ==========*/
