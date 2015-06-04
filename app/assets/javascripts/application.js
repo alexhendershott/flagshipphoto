@@ -16,8 +16,24 @@
 //= require turbolinks
 //= require_tree .
 
-$( document ).ready(function() {
-    $('.selectpicker').selectpicker();
-    var bLazy = new Blazy();
-    console.log("yep");
+$(document).ready(function() {
+  $('.selectpicker').selectpicker();
+  var bLazy = new Blazy({
+    success: function(element){
+       setTimeout(function(){
+         $(".load-wrapper").css("background", "none");
+        }, 200);
+    }
+ });
+});
+
+$(document).on('page:load', function() {
+  $('.selectpicker').selectpicker();
+  var bLazy = new Blazy({
+    success: function(element){
+       setTimeout(function(){
+         $(".load-wrapper").css("background", "none");
+        }, 200);
+    }
+ });
 });

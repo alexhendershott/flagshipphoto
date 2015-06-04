@@ -157,7 +157,7 @@ html, body, h1, h2, h3, h4, h5, h6, a {
   outline: none;
  }
  .hamburger-button {
-   background-image: url("//material-design.storage.googleapis.com/images/hamburger.svg")!important;
+   background-image: url(<%= asset_path 'hamburger.svg' %>)!important;
    height: 24px;
    width: 24px;
    border: 0 none;
@@ -675,10 +675,11 @@ span.glyphicon.glyphicon-ok.check-mark {
   line-height: 20px;
   display: block;
   padding: 15px 0 15px 22px;
+  font-weight: 500;
 }
 
 #side-nav nav dl dt a:hover {
-  color: black;
+  color: $brand-primary;
   text-decoration: none;
 }
 
@@ -688,10 +689,11 @@ span.glyphicon.glyphicon-ok.check-mark {
 
 .side-nav-logo {
   color: $gray-lightest;
-  padding: 24px;
   font-size: 26px;
   padding-bottom: 20px;
-  font-weight: 500;
+  display: block;
+  padding-left: 20px;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .side-nav-logo:hover {
@@ -711,8 +713,15 @@ span.glyphicon.glyphicon-ok.check-mark {
   width: 100%;
 }
 
+.copyright {
+  margin: 0px;
+}
+
+.legal a {
+  color: #333;
+}
+
 dt:hover {
-  background-color: $gray-lightest;
   cursor: pointer;
 }
 
@@ -729,11 +738,10 @@ dt:hover {
 }
 
 .load-wrapper {
-        // Adding a loader and background color. The user will see it
-	// if the image is loading slow.
-        background: #ffffff url(<%= asset_path 'ajax-loader.gif' %>) center center no-repeat;
-        width: 100%
-    }
+  background: #ededee url(<%= asset_path 'loader.gif' %>) center center no-repeat;
+  background-size: 250px;
+  width: 100%
+}
 
 
 
