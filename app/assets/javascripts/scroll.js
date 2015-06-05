@@ -4,11 +4,13 @@ $(document).on('page:change', function () {
      {
         $('.btn-add-home').hide();
         $('.btn-add-nav').show();
+        $('.navbar-brand').show();
      }
     else
      {
       $('.btn-add-home').show();
       $('.btn-add-nav').hide();
+      $('.navbar-brand').hide();
       $('.imageSingle .btn-add-nav').show();
      }
  });
