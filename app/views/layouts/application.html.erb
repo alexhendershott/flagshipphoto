@@ -14,10 +14,10 @@
 
 <% flash.each do |name, msg| %>
   <% if flash[:error] -%>
-    <%= content_tag(:div, msg, class: "alert alert-error") %>
+    <%= content_tag(:div, msg, class: "alert alert-error slideDown") %>
   <% end %>
   <% if flash[:notice] -%>
-    <%= content_tag(:div, msg, class: "alert alert-info") %>
+    <%= content_tag(:div, msg, class: "alert alert-info slideUp") %>
   <% end %>
 <% end %>
 
