@@ -4,14 +4,14 @@
       <div class="panel panel-default panel-account card">
         <div class="panel-body">
 
-          <%= form_for @pin, html: { multipart: true } do |f| %>
-            <% if @pin.errors.any? %>
+          <%= form_for @photo, html: { multipart: true } do |f| %>
+            <% if @photo.errors.any? %>
               <div id="flash_error">
-                <% flash[:error] = @pin.errors.full_messages.to_sentence %>
+                <% flash[:error] = @photo.errors.full_messages.to_sentence %>
               </div>
             <% end %>
 
-            <p class="panel-info">Upload your photo below.</p>
+            <p class="panel-info">Edit your photo below.</p>
 
             <div class="form-group relative">
               <div class="title form-control form-input">Choose Photo</div>
@@ -34,7 +34,7 @@
       </div>
 
       <div class="panel-footer">
-        <%= link_to 'Go Back', pins_path %>
+        <%= link_to 'Go Back', photos_path %>
       </div>
 
     </div>

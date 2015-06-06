@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @pins = Pin.all
+    @photos = Photo.all
   end
   def about
   end
