@@ -1,4 +1,4 @@
-class Pin < ActiveRecord::Base
+class Photo < ActiveRecord::Base
   belongs_to :user
   validates :device, :presence => true
   # validates_presence_of :device, :message => "not selected"

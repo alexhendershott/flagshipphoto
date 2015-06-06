@@ -4,7 +4,7 @@
     <div class="navbar-header">
       <div id="slideleft" class="slide">
         <span class="sub-action">
-          <%= link_to '', pins_path, class: "md-arrow-back md-2x arrow-back" %>
+          <%= link_to '', photos_path, class: "md-arrow-back md-2x arrow-back" %>
         </span>
         <div id="side-nav" class="inner" style="left: -240px;">
           <div class="side-nav-wrapper">
@@ -28,8 +28,8 @@
             </div>
           </div>
         </div>
-        <% if @pin.user == current_user %>
-        <%= link_to "", edit_pin_path(@pin), :class => "btn-floating-edit btn-add-nav md-mode-edit md-2x" %>
+        <% if @photo.user == current_user %>
+        <%= link_to "", edit_photo_path(@photo), :class => "btn-floating-edit btn-add-nav md-mode-edit md-2x" %>
         <% end %>
         <%= link_to "Flagship Photo", root_path, :class => "navbar-brand-sub" %>
       </div>
