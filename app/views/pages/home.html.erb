@@ -35,7 +35,7 @@
                 <div class="panel-body">
                   <div class="card-content">
                     <p><%= photo.description %></p>
-                    <p><%= photo.user.email if photo.user %></p>
+                    <p><%= photo.user.name if photo.user %></p>
                   </div>
                   <div class="card-action">
                     <%= link_to 'Show', photo_path(photo) %>
@@ -65,7 +65,7 @@
                 <div class="panel-body">
                   <div class="card-content">
                     <p><%= photo.description %></p>
-                    <p><%= photo.user.email if photo.user %></p>
+                    <p><%= photo.user.name if photo.user %></p>
                   </div>
                   <div class="card-action">
                     <%= link_to 'Show', photo_path(photo) %>
