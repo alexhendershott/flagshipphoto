@@ -422,7 +422,7 @@ html, body, h1, h2, h3, h4, h5, h6, a {
 
 .panel-body {
   color: rgba(0, 0, 0, 0.87);
-  font-size: 15px;
+  font-size: 16px;
   padding: 0px;
 }
 
@@ -448,11 +448,41 @@ html, body, h1, h2, h3, h4, h5, h6, a {
 
 .card-content {
   padding: 20px;
+  .user {
+    color: $gray-light;
+    font-weight: 100;
+  }
 }
 
 .card-action {
   border-top: 1px solid rgba(160, 160, 160, 0.2);
   padding: 20px;
+  a.show {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    opacity: .8;
+  }
+  a.edit {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    opacity: .8;
+  }
+  a.destroy {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    color: $brand-secondary;
+    margin-left: 14px;
+    opacity: .8;
+  }
+  a:hover {
+    text-decoration: none;
+    opacity: 1;
+  }
 }
 
 .fullCard .col-md-12 {
