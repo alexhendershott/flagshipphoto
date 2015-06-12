@@ -21,7 +21,8 @@ $(document).ready(function() {
   var bLazy = new Blazy({
     success: function(element){
        setTimeout(function(){
-         $(".load-wrapper").css("background", "none");
+         // This works, but is resulting in a bug where the GIF removes before loading is actually complete. Removing for launch. Fix later.
+        //  $(".load-wrapper").css("background", "none");
         }, 200);
     }
  });
@@ -32,7 +33,8 @@ $(document).on('page:load', function() {
   var bLazy = new Blazy({
     success: function(element){
        setTimeout(function(){
-         $(".load-wrapper").css("background", "none");
+         // This works, but is resulting in a bug where the GIF removes before loading is actually complete. Removing for launch. Fix later.
+        //  $(".load-wrapper").css("background", "none");
         }, 200);
     }
  });
