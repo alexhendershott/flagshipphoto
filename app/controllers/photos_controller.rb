@@ -4,7 +4,11 @@ class PhotosController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @photos = Photo.all
+    if params[:model]
+      @photos = Photo.where(:model => params[:model])
+    else
+      @photos = Photo.all
+    end
   end
 
   def show
@@ -54,7 +58,7 @@ class PhotosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_params
-      params.require(:photo).permit(:description, :device, :image)
+      params.require(:photo).permit(:description, :image)
     end
 
 end

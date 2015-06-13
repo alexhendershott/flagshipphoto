@@ -1,2 +1,19 @@
-<h1>Pages#about</h1>
-<p>Find me in app/views/pages/about.html.erb</p>
+<h1>Listing Books</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Model</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @photos.each do |photo| %>
+  <tr>
+    <td><%= photo.user.name %></td>
+    <td><%= photo.model %></td>
+    <td><%= photo.description %></td>
+  </tr>
+<% end %>
+</table>

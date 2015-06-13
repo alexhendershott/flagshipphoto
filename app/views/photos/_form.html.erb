@@ -22,11 +22,7 @@
             <div class="form-group">
               <%= f.text_field :description, placeholder: "Photo Description", class: "form-control" %>
             </div>
-            <!-- Hiding Due to Exif Data Replacing
-            <div class="form-group">
-              <%= f.select(:device, ['Nexus 6', 'Samsung Galaxy S6', 'Samsung Galaxy Note 4', 'LG G4', 'HTC One M9'], {include_blank: "Select Mobile Device"}, { :class => 'selectpicker' }) %>
-            </div>
-            -->
+
             <div class="form-group last">
               <%= f.submit "Submit Photo", class: "btn btn-primary btn-material" %>
             </div>
