@@ -11,7 +11,14 @@ class Photo < ActiveRecord::Base
   def post_process_photo
     imgfile = EXIFR::JPEG.new(image.queued_for_write[:original].path)
     return unless imgfile
+    # Set model to EXIF data via imgfile
     self.model         = imgfile.model
+    # If no EXIF data set model to Unknown
+    unless imgfile.nil? || imgfile == 0
+      self.model       = "Unknown Source"
+    end
+    rescue EXIFR::MalformedJPEG
+
   end
 
 end
