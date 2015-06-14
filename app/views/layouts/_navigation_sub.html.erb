@@ -12,15 +12,17 @@
             <nav>
               <dl>
                 <% if user_signed_in? %>
-                <dt><%= link_to "About", about_path %></dt>
-                <dt><%= link_to "Account Settings", edit_user_registration_path %></dt>
-                <dt><%= link_to "Log Out", destroy_user_session_path, method: :delete %></dt>
+                <div class="profile-settings">
+                  <dt><%= link_to "Account Settings", edit_user_registration_path %></dt>
+                  <dt><%= link_to "Log Out", destroy_user_session_path, method: :delete %></dt>
+                </div>
                 <%= render "layouts/filter_links.html.erb" %>
 
                 <% else %>
-                <dt><%= link_to "About", about_path %></dt>
-                <dt><%= link_to "Log In", new_user_session_path %></dt>
-                <dt><%= link_to "Sign Up", new_user_registration_path %></dt>
+                <div class="profile-settings">
+                  <dt><%= link_to "Log In", new_user_session_path %></dt>
+                  <dt><%= link_to "Sign Up", new_user_registration_path %></dt>
+                </div>
                 <%= render "layouts/filter_links.html.erb" %>
 
                 <% end %>

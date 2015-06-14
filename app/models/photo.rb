@@ -1,7 +1,6 @@
 class Photo < ActiveRecord::Base
   belongs_to :user
-  # validates_presence_of :device, :message => "not selected"
-  validates :model, :presence => true
+  validates_presence_of :model, :message => "cannot be blank. Try uploading another photo."
   validates :image, :presence => true
   validates :description, :presence => true
   has_attached_file :image, :styles => { :large => "2280x1200", :medium => "1200x800>" }
