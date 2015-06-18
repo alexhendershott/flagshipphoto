@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   after_save :mailchimp_status
 
   def mailchimp_status
-    @mailchimp_list_id = "5c939262b1"
+    @mailchimp_list_id = ENV["MC_ID"]
     @gb = Gibbon::API.new
       if self.mailchimp == true
         @gb.lists.subscribe({

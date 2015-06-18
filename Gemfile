@@ -14,6 +14,7 @@ gem 'aws-sdk', '< 2.0'
 gem 'turbolinks'
 gem 'exifr', '~> 1.2.2'
 gem 'gibbon', '~> 1.1.5'
+gem 'figaro'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 
