@@ -6,7 +6,8 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="initial-scale=1">
-  <%= analytics_init if Rails.env.production? %>
+  <!-- Tracking -->
+  <%= render 'layouts/googleanalytics' %>
   <%= render 'layouts/mixpanel' %>
 
 </head>

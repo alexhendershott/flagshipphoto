@@ -77,9 +77,6 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  # Google Analytics
-  GA.tracker = "UA-64319018-1"
-
   # Mixpanel
   MIXPANEL_TOKEN = "a2950708ae140cfeaf69f7d94745d77c"
 
