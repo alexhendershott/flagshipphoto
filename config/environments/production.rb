@@ -80,6 +80,9 @@ Rails.application.configure do
   # Google Analytics
   GA.tracker = "UA-64319018-1"
 
+  # Mixpanel
+  MIXPANEL_TOKEN = "a2950708ae140cfeaf69f7d94745d77c"
+
   #Required for Heroku
   config.action_mailer.default_url_options = { :host => 'http://flagshipphoto.io' }
 

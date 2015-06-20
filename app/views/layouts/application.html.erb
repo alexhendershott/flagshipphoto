@@ -7,6 +7,8 @@
   <%= csrf_meta_tags %>
   <meta name="viewport" content="initial-scale=1">
   <%= analytics_init if Rails.env.production? %>
+  <%= render 'layouts/mixpanel' %>
+
 </head>
 <body class="<%= yield (:body_class) %>">
 
