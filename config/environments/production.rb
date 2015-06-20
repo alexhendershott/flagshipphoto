@@ -77,6 +77,9 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  # Google Analytics
+  GA.tracker = "UA-64319018-1"
+
   #Required for Heroku
   config.action_mailer.default_url_options = { :host => 'http://flagshipphoto.io' }
 
@@ -87,9 +90,6 @@ Rails.application.configure do
     :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
     :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
   }
-
-  # Google Analytics
-  GA.tracker = "UA-64319018-1"
 
 }
 end
