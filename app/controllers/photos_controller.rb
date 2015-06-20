@@ -5,9 +5,9 @@ class PhotosController < ApplicationController
 
   def index
     if params[:model]
-      @photos = Photo.where(:model => params[:model])
+      @photos = Photo.where(:model => params[:model]).order("created_at DESC")
     else
-      @photos = Photo.all
+      @photos = Photo.all.order("created_at DESC")
     end
   end
 
