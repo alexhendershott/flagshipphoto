@@ -22,25 +22,21 @@
           <% end %>
 
           <div class="form-group">
-            <%= f.password_field :password, placeholder: "Password", class: "form-control" %>
+            <%= f.password_field :password, placeholder: "New Password", class: "form-control" %>
           </div>
 
           <div class="form-group">
-            <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Password Confirmation", class: "form-control" %>
+            <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "New Password Confirmation", class: "form-control" %>
           </div>
 
           <div class="form-group">
             <%= f.password_field :current_password, autocomplete: "off", placeholder: "Current Password", class: "form-control" %>
           </div>
 
-          <div class="actions">
+          <div class="form-group last">
             <%= f.submit "Update Password", class: "btn btn-primary btn-material" %>
           </div>
         <% end %>
-
-        <p class="panel-info">Cancel your account below.</p>
-
-        <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-material", method: :delete %>
 
       </div>
     </div>

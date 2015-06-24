@@ -20,6 +20,9 @@
   <% if flash[:error] -%>
     <%= content_tag(:div, msg, class: "alert alert-error slideDown") %>
   <% end %>
+  <% if flash[:alert] -%>
+    <%= content_tag(:div, msg, class: "alert alert-error slideDown") %>
+  <% end %>
   <% if flash[:notice] -%>
     <%= content_tag(:div, msg, class: "alert alert-info slideUp") %>
   <% end %>
