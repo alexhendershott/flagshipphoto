@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
           :LNAME => self.name
         },
         :double_optin => false,
-        :send_welcome => true
+        :send_welcome => false
       })
       elsif self.mailchimp == false
         @gb.lists.unsubscribe({
