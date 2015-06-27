@@ -30,11 +30,20 @@
  @import '_variables';
 
 /* ===GLOBALS=== */
+
 .truncate {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }
 
  /* ===TYPOGRAPHY=== */
@@ -461,6 +470,20 @@ html, body, h1, h2, h3, h4, h5, h6, a {
   color: white;
   font-size: 24px;
   font-weight: 300;
+}
+
+.view-count {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.eyeball {
+  margin-right: 10px;
 }
 
 .card-content {

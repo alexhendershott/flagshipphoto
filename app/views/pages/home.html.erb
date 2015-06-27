@@ -28,7 +28,17 @@
                 <div class="load-wrapper">
                   <a href="<%= photo_path(photo) %>">
                     <div class="card-image b-lazy" data-src="<%= photo.image.url(:large) %>" style="background: no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
-                      <span class="card-title"><%= photo.model %></span>
+                      <span class="card-title">
+                        <%= photo.model %>
+                      </span>
+                      <span class="view-count">
+                        <div class="eyeball left">
+                          <%= image_tag("eye.svg") %>
+                        </div>
+                        <div class="right">
+                          <%= photo.vcount %>
+                        </div>
+                      </span>
                     </div>
                   </a>
                 </div>
@@ -59,7 +69,17 @@
                 <div class="load-wrapper">
                   <a href="<%= photo_path(photo) %>">
                     <div class="card-image b-lazy" data-src="<%= photo.image.url(:medium) %>" style="background: no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
-                      <span class="card-title"><%= photo.model %></span>
+                      <span class="card-title">
+                        <%= photo.model %>
+                      </span>
+                      <span class="view-count">
+                        <div class="eyeball left">
+                          <%= image_tag("eye.svg") %>
+                        </div>
+                        <div class="right">
+                          <%= photo.vcount %>
+                        </div>
+                      </span>
                     </div>
                   </a>
                 </div>

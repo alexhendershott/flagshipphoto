@@ -14,6 +14,9 @@ class PhotosController < ApplicationController
   def show
     @disable_nav = true
     @sub_nav = true
+    # Increasing view count everytime show URL is visited
+    @photo.vcount += 1
+    @photo.save
   end
 
   def new
