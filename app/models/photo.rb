@@ -14,10 +14,37 @@ class Photo < ActiveRecord::Base
   end
 
   def validate_model
+    # Set Non Camera Photo to Unknown
     if model.blank?
       self.model = "Unknown Source"
     else
       validates_presence_of :model
+    end
+    # Rename/Group Samsung S6 Models
+    if model = "SM-G920F"
+      self.model = "Samsung Galaxy S6"
+    else
+      self.model = self.model
+    end
+    if model = "SM-G920I"
+      self.model = "Samsung Galaxy S6"
+    else
+      self.model = self.model
+    end
+    if model = "SM-G920T"
+      self.model = "Samsung Galaxy S6"
+    else
+      self.model = self.model
+    end
+    if model = "SM-G925F"
+      self.model = "Samsung Galaxy S6"
+    else
+      self.model = self.model
+    end
+    if model = "SM-G925I" 
+      self.model = "Samsung Galaxy S6"
+    else
+      self.model = self.model
     end
   end
 
