@@ -21,30 +21,28 @@ class Photo < ActiveRecord::Base
       validates_presence_of :model
     end
     # Rename/Group Samsung S6 Models
-    if model = "SM-G920F"
+    if model == "SM-G920F"
       self.model = "Samsung Galaxy S6"
-    else
-      self.model = self.model
     end
-    if model = "SM-G920I"
+    if model == "SM-G920I"
       self.model = "Samsung Galaxy S6"
-    else
-      self.model = self.model
     end
-    if model = "SM-G920T"
+    if model == "SM-G920T"
       self.model = "Samsung Galaxy S6"
-    else
-      self.model = self.model
     end
-    if model = "SM-G925F"
+    if model == "SM-G925F"
       self.model = "Samsung Galaxy S6"
-    else
-      self.model = self.model
     end
-    if model = "SM-G925I" 
+    if model == "SM-G925I"
       self.model = "Samsung Galaxy S6"
-    else
-      self.model = self.model
+    end
+    # Rename/Group LG G4
+    if model == "LG-H815"
+      self.model = "LG G4"
+    end
+    # Rename/Group LG G4
+    if model == "SM-N910T"
+      self.model = "Samsung Galaxy Note 4"
     end
   end
 
