@@ -44,6 +44,10 @@ class Photo < ActiveRecord::Base
     if model == "SM-N910T"
       self.model = "Samsung Galaxy Note 4"
     end
+    # Rename/Group Moto X (2014)
+    if model == "XT1097"
+      self.model = "Moto X (2014)"
+    end
   end
 
 end
