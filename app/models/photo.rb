@@ -1,7 +1,7 @@
 class Photo < ActiveRecord::Base
   belongs_to :user
   validate :rename_models
-  validates :model, :presence => true
+  validates_presence_of :model, :message => "type not detected. Try uploading another photo."
   validates :image, :presence => true
   validates :description, :presence => true
   has_attached_file :image, :styles => { :large => "2280x1200", :medium => "1200x800>" }

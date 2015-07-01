@@ -21,3 +21,9 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+    models:
+      photo: "Photo"
+    attributes:
+      photo:
+        model: "Phone"
