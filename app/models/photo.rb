@@ -63,6 +63,10 @@ class Photo < ActiveRecord::Base
     if model == "XT1064"
       self.model = "Moto G (2nd Gen)"
     end
+    # Rename/Group Sony Xperia Z3
+    if model == "D6653"
+      self.model = "Sony Xperia Z3"
+    end
   end
 
 end
