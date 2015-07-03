@@ -9,28 +9,31 @@
         <div id="side-nav" class="inner" style="left: -240px;">
           <div class="side-nav-wrapper">
             <%= link_to "Flagship Photo", root_path, :class => "side-nav-logo" %>
+
             <nav>
               <dl>
-                <% if user_signed_in? %>
-                <div class="profile-settings">
-                  <dt><%= link_to "Account Settings", edit_user_registration_path %></dt>
-                  <dt><%= link_to "Log Out", destroy_user_session_path, method: :delete %></dt>
-                </div>
                 <%= render "layouts/filter_links.html.erb" %>
-
-                <% else %>
-                <div class="profile-settings">
-                  <dt><%= link_to "Log In", new_user_session_path %></dt>
-                  <dt><%= link_to "Sign Up", new_user_registration_path %></dt>
-                </div>
-                <%= render "layouts/filter_links.html.erb" %>
-
-                <% end %>
               </dl>
             </nav>
-            <div class="legal">
+
+            <div class="bottom">
+
+              <% if user_signed_in? %>
+              <div class="profile-settings">
+                <dt><%= link_to "Account Settings", edit_user_registration_path %></dt>
+                <dt><%= link_to "Log Out", destroy_user_session_path, method: :delete %></dt>
+              </div>
+
+              <% else %>
+              <div class="profile-settings">
+                <dt><%= link_to "Log In", new_user_session_path %></dt>
+                <dt><%= link_to "Sign Up", new_user_registration_path %></dt>
+              </div>
+              <% end %>
+
               <p class="copyright">Flagship Photo ©</p>
               <a href="mailto:alex.hendershott@gmail.com?subject=Flagship Photo Feedback" class="sidebar-link">Feedback? Email Me!</a>
+
             </div>
           </div>
         </div>
