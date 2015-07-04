@@ -48,6 +48,16 @@ class PhotosController < ApplicationController
     redirect_to photos_url
   end
 
+  def favorite
+    @photo = Photo.find(params[:id])
+    if current_user.voted_for? @photo
+      redirect_to "/", notice: 'You already favorited the photo!'
+    else
+      @photo.upvote_by current_user
+      redirect_to "/", notice: 'You have favorited the photo.'
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_photo

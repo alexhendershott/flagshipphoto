@@ -15,6 +15,7 @@ gem 'turbolinks'
 gem 'exifr', '~> 1.2.2'
 gem 'gibbon', '~> 1.1.5'
 gem 'figaro'
+gem 'acts_as_votable', '~> 0.10.0'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 

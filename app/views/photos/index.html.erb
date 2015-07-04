@@ -36,7 +36,7 @@
                           <%= image_tag("star.svg") %>
                         </div>
                         <div class="right">
-                          2
+                          <%= photo.get_upvotes.size %>
                         </div>
                       </span>
                       <span class="view-count">
@@ -60,12 +60,12 @@
                     <% if current_user && photo.user == current_user %>
                       <%= link_to 'Show', photo_path(photo), :class => "display" %>
                       <%= link_to 'Edit', edit_photo_path(photo), :class => "edit" %>
-                      <%= link_to 'Favorite', 'google.com', :class => "favorite" %>
+                      <%= link_to 'Favorite', like_photo_path(photo), method: :put, :class => "favorite" %>
                       <%= link_to 'Delete', photo, :class => "destroy", method: :delete, data: { confirm: 'Are you sure?' } %>
 
                       <% elsif user_signed_in? %>
                       <%= link_to 'Show', photo_path(photo), :class => "display" %>
-                      <%= link_to 'Favorite', 'google.com', :class => "favorite" %>
+                      <%= link_to 'Favorite', like_photo_path(photo), method: :put, :class => "favorite" %>
 
                       <% else %>
                       <%= link_to 'Show', photo_path(photo), :class => "display" %>
@@ -94,7 +94,7 @@
                           <%= image_tag("star.svg") %>
                         </div>
                         <div class="right">
-                          2
+                          <%= photo.get_upvotes.size %>
                         </div>
                       </span>
                       <span class="view-count">
@@ -118,12 +118,12 @@
                     <% if current_user && photo.user == current_user %>
                       <%= link_to 'Show', photo_path(photo), :class => "display" %>
                       <%= link_to 'Edit', edit_photo_path(photo), :class => "edit" %>
-                      <%= link_to 'Favorite', 'google.com', :class => "favorite" %>
+                      <%= link_to 'Favorite', like_photo_path(photo), method: :put, :class => "favorite" %>
                       <%= link_to 'Delete', photo, :class => "destroy", method: :delete, data: { confirm: 'Are you sure?' } %>
 
                       <% elsif user_signed_in? %>
                       <%= link_to 'Show', photo_path(photo), :class => "display" %>
-                      <%= link_to 'Favorite', 'google.com', :class => "favorite" %>
+                      <%= link_to 'Favorite', like_photo_path(photo), method: :put, :class => "favorite" %>
 
                       <% else %>
                       <%= link_to 'Show', photo_path(photo), :class => "display" %>
