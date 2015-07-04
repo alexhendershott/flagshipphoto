@@ -31,22 +31,26 @@
                       <span class="card-title">
                         <%= photo.model %>
                       </span>
-                      <span class="upvotes">
-                        <div class="eyeball left">
-                          <%= image_tag("star.svg") %>
+
+                      <div class="card-stats">
+                        <div class="upvotes">
+                          <div class="eyeball left">
+                            <%= image_tag("star.svg") %>
+                          </div>
+                          <div class="right favorite-<%= photo.id %>">
+                            <%= photo.get_upvotes.size %>
+                          </div>
                         </div>
-                        <div class="right favorite-<%= photo.id %>">
-                          <%= photo.get_upvotes.size %>
+                        <div class="view-count">
+                          <div class="eyeball left">
+                            <%= image_tag("eye.svg") %>
+                          </div>
+                          <div class="right">
+                            <%= photo.vcount %>
+                          </div>
                         </div>
-                      </span>
-                      <span class="view-count">
-                        <div class="eyeball left">
-                          <%= image_tag("eye.svg") %>
-                        </div>
-                        <div class="right">
-                          <%= photo.vcount %>
-                        </div>
-                      </span>
+                      </div>
+
                     </div>
                   </a>
                 </div>
@@ -90,22 +94,26 @@
                       <span class="card-title">
                         <%= photo.model %>
                       </span>
-                      <span class="upvotes">
-                        <div class="eyeball left">
-                          <%= image_tag("star.svg") %>
+
+                      <div class="card-stats">
+                        <div class="upvotes">
+                          <div class="eyeball left">
+                            <%= image_tag("star.svg") %>
+                          </div>
+                          <div class="right favorite-<%= photo.id %>">
+                            <%= photo.get_upvotes.size %>
+                          </div>
                         </div>
-                        <div class="right favorite-<%= photo.id %>">
-                          <%= photo.get_upvotes.size %>
+                        <div class="view-count">
+                          <div class="eyeball left">
+                            <%= image_tag("eye.svg") %>
+                          </div>
+                          <div class="right">
+                            <%= photo.vcount %>
+                          </div>
                         </div>
-                      </span>
-                      <span class="view-count">
-                        <div class="eyeball left">
-                          <%= image_tag("eye.svg") %>
-                        </div>
-                        <div class="right">
-                          <%= photo.vcount %>
-                        </div>
-                      </span>
+                      </div>
+
                     </div>
                   </a>
                 </div>
