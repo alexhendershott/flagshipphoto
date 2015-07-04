@@ -50,6 +50,10 @@ class Photo < ActiveRecord::Base
     if model == "SM-G925I"
       self.model = "Samsung Galaxy S6"
     end
+    # Rename/Group Samsung S5 Models
+    if model == "SM-G900F"
+      self.model = "Samsung Galaxy S5"
+    end
     # Rename/Group LG G4
     if model == "LG-H815"
       self.model = "LG G4"
