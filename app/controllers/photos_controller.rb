@@ -4,11 +4,7 @@ class PhotosController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    if params[:model]
-      @photos = Photo.where(:model => params[:model]).order("created_at DESC")
-    else
-      @photos = Photo.all.order("created_at DESC")
-    end
+    redirect_to root_url
   end
 
   def show
@@ -57,10 +53,10 @@ class PhotosController < ApplicationController
           redirect_to "/"
         }
         format.js   {
-          
+
         }
       else
-        @photo.upvote_by current_user
+        @favorited = @photo.upvote_by current_user
         format.html {
           flash[:notice] = 'You have favorited the photo.'
           redirect_to "/"
