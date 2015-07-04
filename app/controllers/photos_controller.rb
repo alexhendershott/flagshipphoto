@@ -57,7 +57,7 @@ class PhotosController < ApplicationController
           redirect_to "/"
         }
         format.js   {
-
+          
         }
       else
         @photo.upvote_by current_user
