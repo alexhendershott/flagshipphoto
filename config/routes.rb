@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :photos
+  resources :photos do
+    member do
+      post 'favorite'
+    end
+  end
   devise_for :users
   root 'pages#home'
   get 'about' => 'pages#about'

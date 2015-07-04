@@ -1,4 +1,5 @@
 class DropVotesTable < ActiveRecord::Migration
+
   def up
     drop_table :votes
   end
@@ -6,4 +7,5 @@ class DropVotesTable < ActiveRecord::Migration
   def down
     raise ActiveRecord::IrreversibleMigration
   end
+
 end

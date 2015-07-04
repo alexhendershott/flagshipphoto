@@ -31,6 +31,14 @@
                       <span class="card-title">
                         <%= photo.model %>
                       </span>
+                      <span class="upvotes">
+                        <div class="eyeball left">
+                          <%= image_tag("star.svg") %>
+                        </div>
+                        <div class="right">
+                          <%= photo.votes.count %>
+                        </div>
+                      </span>
                       <span class="view-count">
                         <div class="eyeball left">
                           <%= image_tag("eye.svg") %>
@@ -48,12 +56,21 @@
                     <p class="truncate"><%= photo.description %></p>
                   </div>
                   <div class="card-action">
+
                     <% if current_user && photo.user == current_user %>
+                      <%= link_to 'Show', photo_path(photo), :class => "display" %>
                       <%= link_to 'Edit', edit_photo_path(photo), :class => "edit" %>
+                      <%= link_to 'Favorite', favorite_photo_path(photo), method: :post, :class => "favorite" %>
                       <%= link_to 'Delete', photo, :class => "destroy", method: :delete, data: { confirm: 'Are you sure?' } %>
+
+                      <% elsif user_signed_in? %>
+                      <%= link_to 'Show', photo_path(photo), :class => "display" %>
+                      <%= link_to 'Favorite', favorite_photo_path(photo), method: :post, :class => "favorite" %>
+
                       <% else %>
-                      <%= link_to 'Show', photo_path(photo), :class => "show" %>
+                      <%= link_to 'Show', photo_path(photo), :class => "display" %>
                     <% end %>
+
                   </div>
                 </div>
               </div>
@@ -72,6 +89,14 @@
                       <span class="card-title">
                         <%= photo.model %>
                       </span>
+                      <span class="upvotes">
+                        <div class="eyeball left">
+                          <%= image_tag("star.svg") %>
+                        </div>
+                        <div class="right">
+                          <%= photo.votes.count %>
+                        </div>
+                      </span>
                       <span class="view-count">
                         <div class="eyeball left">
                           <%= image_tag("eye.svg") %>
@@ -89,12 +114,21 @@
                     <p class="truncate"><%= photo.description %></p>
                   </div>
                   <div class="card-action">
+
                     <% if current_user && photo.user == current_user %>
+                      <%= link_to 'Show', photo_path(photo), :class => "display" %>
                       <%= link_to 'Edit', edit_photo_path(photo), :class => "edit" %>
+                      <%= link_to 'Favorite', favorite_photo_path(photo), method: :post, :class => "favorite" %>
                       <%= link_to 'Delete', photo, :class => "destroy", method: :delete, data: { confirm: 'Are you sure?' } %>
+
+                      <% elsif user_signed_in? %>
+                      <%= link_to 'Show', photo_path(photo), :class => "display" %>
+                      <%= link_to 'Favorite', favorite_photo_path(photo), method: :post, :class => "favorite" %>
+
                       <% else %>
-                      <%= link_to 'Show', photo_path(photo), :class => "show" %>
+                      <%= link_to 'Show', photo_path(photo), :class => "display" %>
                     <% end %>
+
                   </div>
                 </div>
               </div>
