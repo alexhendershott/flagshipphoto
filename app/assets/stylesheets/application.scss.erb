@@ -46,6 +46,11 @@
   float: right;
 }
 
+a:active, a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
  /* ===TYPOGRAPHY=== */
 
  @font-face {
@@ -501,6 +506,16 @@ html, body, h1, h2, h3, h4, h5, h6, a {
   font-weight: 300;
 }
 
+.upvotes {
+  position: absolute;
+  bottom: 0;
+  right: 60px;
+  padding: 20px;
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+}
+
 .eyeball {
   margin-right: 10px;
 }
@@ -516,11 +531,20 @@ html, body, h1, h2, h3, h4, h5, h6, a {
 .card-action {
   border-top: 1px solid rgba(160, 160, 160, 0.2);
   padding: 20px;
-  a.show {
+  a.display {
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 500;
     color: #333;
+    opacity: .8;
+  }
+  a.favorite {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    color: $brand-favorite;
+    margin-left: 14px;
     opacity: .8;
   }
   a.edit {
@@ -528,6 +552,7 @@ html, body, h1, h2, h3, h4, h5, h6, a {
     font-size: 16px;
     font-weight: 500;
     color: #333;
+    margin-left: 14px;
     opacity: .8;
   }
   a.destroy {
