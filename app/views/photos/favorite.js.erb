@@ -3,10 +3,14 @@
     class: 'alert alert-info slideUp',
     text: 'The photo has been favorited.'
   }).appendTo('.navbar');
-  $('.favorites_count').html('53');
+  $('.alert').delay(5000).fadeOut(1000);
+  $('.favorite').bind('ajax:success', function() {
+    $('.favorite-<%= @photo.id %>').html('<%= @photo.get_upvotes.size %>');
+  });
 <% else %>
   jQuery('<div/>', {
     class: 'alert alert-error slideDown',
     text: 'You have already favorited this photo!'
   }).appendTo('.navbar');
+  $('.alert').delay(5000).fadeOut(1000);
 <% end %>

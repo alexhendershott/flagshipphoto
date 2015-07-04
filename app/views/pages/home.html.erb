@@ -35,7 +35,7 @@
                         <div class="eyeball left">
                           <%= image_tag("star.svg") %>
                         </div>
-                        <div class="right favorites-count">
+                        <div class="right favorite-<%= photo.id %>">
                           <%= photo.get_upvotes.size %>
                         </div>
                       </span>
@@ -61,6 +61,7 @@
                       <%= link_to 'Show', photo_path(photo), :class => "display" %>
                       <%= link_to 'Edit', edit_photo_path(photo), :class => "edit" %>
                       <%= link_to 'Favorite', like_photo_path(photo), method: :put, remote: true, :class => "favorite" %>
+
                       <%= link_to 'Delete', photo, :class => "destroy", method: :delete, data: { confirm: 'Are you sure?' } %>
 
                       <% elsif user_signed_in? %>
@@ -93,7 +94,7 @@
                         <div class="eyeball left">
                           <%= image_tag("star.svg") %>
                         </div>
-                        <div class="right favorites-count">
+                        <div class="right favorite-<%= photo.id %>">
                           <%= photo.get_upvotes.size %>
                         </div>
                       </span>

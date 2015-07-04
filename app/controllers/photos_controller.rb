@@ -4,7 +4,7 @@ class PhotosController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    redirect_to root_url
+    redirect_to "/"
   end
 
   def show
