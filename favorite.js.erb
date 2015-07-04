@@ -1,0 +1,12 @@
+<% if @favorited %>
+  jQuery('<div/>', {
+    class: 'alert alert-info slideUp',
+    text: 'The photo has been favorited.'
+  }).appendTo('.navbar');
+  $('#favorites_count').html('53');
+<% else %>
+  jQuery('<div/>', {
+    class: 'alert alert-error slideDown',
+    text: 'You have already favorited this photo!'
+  }).appendTo('.navbar');
+<% end %>

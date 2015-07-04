@@ -1,4 +1,5 @@
 class Photo < ActiveRecord::Base
+  acts_as_votable
   belongs_to :user
   validate :rename_models
   validates_presence_of :model, :message => "type not detected. Try uploading another photo."
