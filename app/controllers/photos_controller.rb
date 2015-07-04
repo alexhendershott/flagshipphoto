@@ -49,14 +49,65 @@ class PhotosController < ApplicationController
   end
 
   def favorite
-    @photo = Photo.find(params[:id])
-    if current_user.voted_for? @photo
-      redirect_to "/", notice: 'You already favorited the photo!'
-    else
-      @photo.upvote_by current_user
-      redirect_to "/", notice: 'You have favorited the photo.'
+    respond_to do |format|
+      @photo = Photo.find(params[:id])
+      if current_user.voted_for? @photo
+        format.html {
+          flash[:error] = 'You already favorited the photo!'
+          redirect_to "/"
+        }
+        format.js   {
+
+        }
+      else
+        @photo.upvote_by current_user
+        format.html {
+          flash[:notice] = 'You have favorited the photo.'
+          redirect_to "/"
+        }
+        format.js   {
+
+        }
+      end
     end
   end
+
+  # def favorite
+  #   @photo = Photo.find(params[:id])
+  #   if current_user.voted_for? @photo
+  #     flash[:error] = 'You already favorited the photo!'
+  #     redirect_to "/"
+  #   else
+  #     @photo.upvote_by current_user
+  #     flash[:notice] = 'You have favorited the photo.'
+  #     redirect_to "/"
+  #   end
+  # end
+
+  #   def favorite
+  #   @photo = Photo.find(params[:id])
+  #
+  #   if @photo.votes.create(user_id: current_user.id)
+  #     flash[:notice] =  "Thank you for upvoting!"
+  #     redirect_to(photos_path)
+  #   else
+  #     flash[:notice] =  "You have already upvoted this!"
+  #     redirect_to(photos_path)
+  #   end
+  # end
+
+    # def favorite
+    #   respond_to do |format|
+    #     @photo = Photo.find(params[:id])
+    #     @photo.votes.create
+    #       format.html { redirect_to @photos_path, notice: 'The photo has been favorited.' }
+    #       format.js   {}
+    #     else
+    #       format.html { redirect_to @photos_path, notice: 'You have already favorited this photo!' }
+    #       format.js   { render status: :500 }
+    #     end
+    #   end
+    # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
